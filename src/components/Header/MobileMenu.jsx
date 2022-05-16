@@ -23,7 +23,7 @@ const MobileMenu = () => {
         aria-haspopup="true"
         onClick={handleOpenNavMenu}
       >
-        <MenuIcon />
+        <MenuIcon sx={{ color: '#fff' }} />
       </IconButton>
 
       <Menu

@@ -6,7 +6,7 @@ const Search = styled('div')(({ theme }) => ({
   display: 'none',
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha('#b3b3b3', 0.05),
+  backgroundColor: alpha('#b3b3b3', 0.1),
   '&:hover': {
     backgroundColor: alpha('#b3b3b3', 0.25),
   },
@@ -18,7 +18,7 @@ const Search = styled('div')(({ theme }) => ({
 }));
 
 const SearchIconWrapper = styled('div')(({ theme }) => ({
-  color: '#3333',
+  color: '#fff',
   padding: theme.spacing(0, 2),
   height: '100%',
   position: 'absolute',
@@ -34,6 +34,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
     width: '100%',
+    color: '#fff',
     [theme.breakpoints.up('sm')]: {
       width: '20ch',
       '&:focus': {

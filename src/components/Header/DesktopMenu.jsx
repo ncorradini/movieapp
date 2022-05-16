@@ -11,7 +11,7 @@ const DesktopMenu = () => {
       {pages.map((page) => (
         <Button
           key={page}
-          sx={{ my: 2, px: 3, color: '#333333', display: 'block' }}
+          sx={{ my: 2, px: 3, color: '#fff', display: 'block' }}
         >
           {page}
         </Button>

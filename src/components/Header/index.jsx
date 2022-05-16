@@ -9,7 +9,7 @@ const Header = () => {
     <AppBar
       elevation={0}
       position="static"
-      sx={{ background: '#fff' }}
+      sx={{ background: '#080808' }}
     >
       <Container maxWidth="lg">
         <Toolbar disableGutters>

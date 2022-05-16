@@ -13,11 +13,16 @@ const Logo = () => {
         fontFamily: 'monospace',
         fontWeight: 700,
         letterSpacing: '.3rem',
-        color: '#333333',
+        color: '#fff',
         textDecoration: 'none',
       }}
     >
-      MOVIE APP
+      MOVIE
+      <Typography
+        color="primary"
+        variant="span">
+        APP
+      </Typography>
     </Typography>
   );
 };
