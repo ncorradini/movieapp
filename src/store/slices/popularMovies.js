@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { popularMoviesRequest } from '../../services/movieServices';
+import { popularMoviesRequest } from '../../services/popularMovieServices';
 
 export const popularMoviesSlice = createSlice({
   name: 'popularMovies',

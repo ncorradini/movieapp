@@ -1,1 +1,1 @@
-export const pages = ['Products', 'Pricing', 'Blog'];
+export const pages = ['Acción', 'Terror', 'Drama', 'Documental'];
