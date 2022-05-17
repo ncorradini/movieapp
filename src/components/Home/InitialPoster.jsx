@@ -1,7 +1,18 @@
 import styled from '@emotion/styled';
 import { Box, Button, Typography } from '@mui/material';
+import { useSelector } from 'react-redux';
 
 const InitialPoster = ({ movie }) => {
+  const { list } = useSelector(state => state.genre);
+
+  const genres = list.map(item => {
+    if (movie.genre_ids.includes(item.id)) {
+      return item;
+    } else {
+      return null;
+    }
+  });
+
   const PosterBox = styled('section')({
     display: 'flex',
     alignItems: 'end',
@@ -29,8 +40,14 @@ const InitialPoster = ({ movie }) => {
         >
           {movie?.title}
         </Typography>
-        <Typography sx={{ my: '10px' }}>
-          Generos
+        <Typography fontSize="small" sx={{ my: '10px' }}>
+          {genres.map(item => {
+            if (item) {
+              return `${item.name}, `;
+            } else {
+              return null;
+            }
+          })}
         </Typography>
         <Typography sx={{
           width: '500px',
