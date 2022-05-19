@@ -1,7 +1,10 @@
+import { useNavigate } from 'react-router-dom';
 import { Box, Button } from '@mui/material';
-import { pages } from './Pages';
+import { convertLinks, pages } from './Pages';
 
 const DesktopMenu = () => {
+  const navigate = useNavigate();
+
   return (
     <Box sx={{
       flexGrow: 1,
@@ -11,7 +14,13 @@ const DesktopMenu = () => {
       {pages.map((page) => (
         <Button
           key={page}
-          sx={{ my: 2, px: 3, color: '#fff', display: 'block' }}
+          sx={{
+            my: 2,
+            px: 3,
+            color: '#fff',
+            display: 'block',
+          }}
+          onClick={() => navigate(`/${convertLinks(page)}`)}
         >
           {page}
         </Button>

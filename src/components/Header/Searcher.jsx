@@ -52,7 +52,7 @@ const Searcher = () => {
           <SearchIcon />
         </SearchIconWrapper>
         <StyledInputBase
-          placeholder="Search…"
+          placeholder="Buscar…"
         />
       </Search>
     </Box>

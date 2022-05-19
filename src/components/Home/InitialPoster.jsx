@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Box, Button, Typography } from '@mui/material';
+import { Button, Container, Typography } from '@mui/material';
 import { useSelector } from 'react-redux';
 
 const InitialPoster = ({ movie }) => {
@@ -30,10 +30,7 @@ const InitialPoster = ({ movie }) => {
 
   return (
     <PosterBox>
-      <Box sx={{
-        ml: '50px',
-        mb: '40px',
-      }}>
+      <Container maxWidth="lg" sx={{ mb: '40px' }}>
         <Typography
           variant="h3"
           fontWeight="bold"
@@ -65,7 +62,7 @@ const InitialPoster = ({ movie }) => {
           variant="outlined"
           sx={{ width: '120px' }}
         >Más info</Button>
-      </Box>
+      </Container>
     </PosterBox>
   );
 };
