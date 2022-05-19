@@ -1,5 +1,5 @@
 import { Box, Container, Typography } from '@mui/material';
-import MovieCard from './MovieCard';
+import MovieCard from '../MovieCard';
 
 const PopularMovies = ({ movies }) => {
   return (
