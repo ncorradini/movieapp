@@ -3,6 +3,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import { fetchGenre } from '../../store/slices/genre';
 import { fetchPopularMovies } from '../../store/slices/popularMovies';
+import ActionSection from '../ActionSection';
+import AnimationSection from '../AnimationSection';
+import DramaSection from '../DramaSection';
+import HorrorSection from '../HorrorSection';
 import MovieDetail from '../MovieDetail';
 import InitialPoster from './InitialPoster';
 import PopularMovies from './PopularMovies';
@@ -26,6 +30,10 @@ const Home = () => {
 
       <Routes>
         <Route path="/detalle/:id" element={<MovieDetail />} />
+        <Route path="/action" element={<ActionSection />} />
+        <Route path="/horror" element={<HorrorSection />} />
+        <Route path="/drama" element={<DramaSection />} />
+        <Route path="/animation" element={<AnimationSection />} />
       </Routes>
     </>
   );
