@@ -1,9 +1,10 @@
 import './index.css';
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
+import Spinner from './components/Spinner';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
@@ -12,7 +13,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Provider store={store}>
-        <App />
+        <Suspense fallback={<Spinner />}>
+          <App />
+        </Suspense>
       </Provider>
     </BrowserRouter>
   </React.StrictMode>,

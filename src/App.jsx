@@ -1,9 +1,9 @@
 import { ThemeProvider } from '@emotion/react';
 import { theme } from './config/costumTheme';
+import { CssBaseline } from '@mui/material';
 import Header from './components/Header';
 import Routing from './routes/routes';
 import Footer from './components/Footer';
-import { CssBaseline } from '@mui/material';
 
 const App = () => {
   return (

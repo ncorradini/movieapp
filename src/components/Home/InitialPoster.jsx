@@ -40,14 +40,14 @@ const InitialPoster = ({ movie }) => {
         <Typography fontSize="small" sx={{ my: '10px' }}>
           {genres.map(item => {
             if (item) {
-              return `${item.name}, `;
+              return `${item.name} | `;
             } else {
               return null;
             }
           })}
         </Typography>
         <Typography sx={{
-          width: '500px',
+          maxWidth: '500px',
           height: '70px',
           overflow: 'hidden',
           mb: '20px',
@@ -56,12 +56,14 @@ const InitialPoster = ({ movie }) => {
         </Typography>
         <Button
           variant="contained"
-          sx={{ width: '100px', mr: '10px' }}
-        >Ver</Button>
+          sx={{ width: '100px', mr: '10px' }}>
+          Ver
+        </Button>
         <Button
           variant="outlined"
-          sx={{ width: '120px' }}
-        >Más info</Button>
+          sx={{ width: '120px' }}>
+          Más info
+        </Button>
       </Container>
     </PosterBox>
   );
