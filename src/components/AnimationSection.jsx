@@ -2,11 +2,10 @@ import { Box, Container, Typography } from '@mui/material';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAnimationMovies } from '../store/slices/animationMovies';
-import CardListSkeleton from './CardListSkeleton';
 import MovieCard from './MovieCard';
 
 const AnimationSection = () => {
-  const { list, loading } = useSelector(state => state.animationMovies);
+  const { list } = useSelector(state => state.animationMovies);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -28,15 +27,7 @@ const AnimationSection = () => {
         flexWrap: 'wrap',
         justifyContent: 'center',
       }}>
-        {loading
-          ? <CardListSkeleton />
-          : list.map(movie =>
-            <MovieCard
-              key={movie.id}
-              movie={movie} />,
-          )
-        }
-
+        {list.map(movie => <MovieCard key={movie.id} movie={movie} />) }
       </Box>
     </Container>
   );
