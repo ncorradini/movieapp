@@ -12,7 +12,7 @@ const Routing = () => {
       path: '/',
       element: <Home />,
       children: [
-        { path: '/detalle/:id', element: <MovieDetail /> },
+        { path: '/detalle/:title', element: <MovieDetail /> },
         { path: '/action', element: <ActionSection /> },
         { path: '/horror', element: <HorrorSection /> },
         { path: '/drama', element: <DramaSection /> },
