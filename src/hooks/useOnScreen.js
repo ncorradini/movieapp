@@ -6,6 +6,7 @@ export const useOnScreen = (ref) => {
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
       setIntersecting(entry.isIntersecting);
+      if (entry.isIntersecting) observer.disconnect();
     }, {
       rootMargin: '0px',
     });

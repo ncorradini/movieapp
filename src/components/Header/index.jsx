@@ -13,8 +13,8 @@ const Header = () => {
     >
       <Container maxWidth="lg">
         <Toolbar disableGutters>
-          <MobileMenu />
           <Logo />
+          <MobileMenu />
           <DesktopMenu />
           <Searcher />
         </Toolbar>

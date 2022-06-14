@@ -2,6 +2,7 @@ import { Box, Container, Typography } from '@mui/material';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAnimationMovies } from '../store/slices/animationMovies';
+import InitialPoster from './Home/InitialPoster';
 import MovieCard from './MovieCard';
 
 const AnimationSection = () => {
@@ -13,23 +14,28 @@ const AnimationSection = () => {
   }, [dispatch]);
 
   return (
-    <Container maxWidth="lg" sx={{
-      mt: '60px',
-      minHeight: '500px',
-    }}>
-      <Typography variant="h5" sx={{
-        color: '#fff',
+    <>
+      <InitialPoster movie={list[0]} />
+      <Container maxWidth="lg" sx={{
+        mt: '60px',
+        minHeight: '500px',
       }}>
-        Películas Animadas
-      </Typography>
-      <Box sx={{
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'center',
-      }}>
-        {list.map(movie => <MovieCard key={movie.id} movie={movie} />) }
-      </Box>
-    </Container>
+        <Typography variant="h5" sx={{
+          color: '#fff',
+        }}>
+          Películas Animadas
+        </Typography>
+        <Box sx={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+        }}>
+          {list.map(movie =>
+            <MovieCard key={movie.id} movie={movie} />,
+          ) }
+        </Box>
+      </Container>
+    </>
   );
 };
 

@@ -6,7 +6,7 @@ const InitialPoster = ({ movie }) => {
   const { list } = useSelector(state => state.genre);
 
   const genres = list.map(item => {
-    if (movie.genre_ids.includes(item.id)) {
+    if (movie?.genre_ids.includes(item.id)) {
       return item;
     } else {
       return null;
@@ -32,15 +32,17 @@ const InitialPoster = ({ movie }) => {
     <PosterBox>
       <Container maxWidth="lg" sx={{ mb: '40px' }}>
         <Typography
-          variant="h3"
-          fontWeight="bold"
+          sx={{
+            fontSize: { sm: '40px', xs: '30px' },
+            fontWeight: 'bold',
+          }}
         >
           {movie?.title}
         </Typography>
         <Typography fontSize="small" sx={{ my: '10px' }}>
           {genres.map(item => {
             if (item) {
-              return `${item.name} | `;
+              return item.name + ' · ';
             } else {
               return null;
             }
